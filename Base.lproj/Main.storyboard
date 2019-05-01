@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ASVideoTrimmer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-Eo-kep">
+                                <rect key="frame" x="116" y="551" width="143" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Zhd-QW-JQK"/>
+                                </constraints>
+                                <state key="normal" title="Direct Open Trimmer"/>
+                                <connections>
+                                    <action selector="btnOpenVideoTrimmerTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3l0-Nd-7LW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVK-hA-e7C">
+                                <rect key="frame" x="90" y="501" width="195" height="30"/>
+                                <state key="normal" title="Select a Movie From Device "/>
+                                <connections>
+                                    <action selector="btnOpenGallaryTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9W-sr-Q6b"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90n-R5-1PC">
+                                <rect key="frame" x="45.5" y="186" width="284" height="295"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="B7Y-X8-xT0"/>
+                                    <constraint firstAttribute="height" constant="295" id="Uja-LG-PVW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vat-Eo-kep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="403-TB-QT4"/>
+                            <constraint firstItem="yVK-hA-e7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="44G-hz-Jl0"/>
+                            <constraint firstItem="90n-R5-1PC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AnL-hX-dtT"/>
+                            <constraint firstItem="yVK-hA-e7C" firstAttribute="top" secondItem="90n-R5-1PC" secondAttribute="bottom" constant="20" id="J3m-i1-nk4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVK-hA-e7C" secondAttribute="trailing" constant="90" id="Usj-8a-sWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vat-Eo-kep" secondAttribute="trailing" constant="116" id="h0k-Hx-3Hr"/>
+                            <constraint firstItem="Vat-Eo-kep" firstAttribute="top" secondItem="yVK-hA-e7C" secondAttribute="bottom" constant="20" id="iT0-d2-M7s"/>
+                            <constraint firstItem="90n-R5-1PC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zTD-Ue-Rrm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoResultView" destination="90n-R5-1PC" id="ilQ-Ai-dIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.39999999999998" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+</document>
