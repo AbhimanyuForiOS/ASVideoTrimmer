@@ -105,9 +105,11 @@ class ASBottomActionView:UIView{
             try fileManager.removeItem(at: outputURL)
         }
         catch{}
-        let start = CMTimeMakeWithSeconds(Float64(ASVideoTrimmerView.shared.config.startPoint!), preferredTimescale: 600)
-        let duration = CMTimeMakeWithSeconds(Float64(ASVideoTrimmerView.shared.config.endPoint!), preferredTimescale: 600)
         
+        let playerTimescale = ASVideoTrimmerView.shared.avPlayer?.currentItem?.asset.duration.timescale ?? 1
+        let startPoint =  ASVideoTrimmerView.shared.config.endPoint!-ASVideoTrimmerView.shared.config.limit!
+        let start = CMTime(seconds: Double(startPoint), preferredTimescale: playerTimescale)
+        let duration =  CMTime(seconds: Double(ASVideoTrimmerView.shared.config.endPoint!), preferredTimescale: playerTimescale)
         let videoTrimer = VideoTrimmer()
         
         videoTrimer.trimVideo(sourceURL: ASVideoTrimmerView.shared.config.orignalUrl!, destinationURL: outputURL, trimPoints: [(start,duration)]) { (error) in
